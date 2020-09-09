@@ -78,7 +78,3 @@ Edit the application pool and set '.NET CLR version' to 'No managed code'
 
 You can then access the site via the ports/hostname set in bindings that are set in IIS. If you see an error check the `Application` event log for details and you'll see any errors output from IIS.
 
-### Configuration
-
-smtp4dev configuration can be performed via `appsetting.json` file, environment variables and command line arguments. Run smtp4dev with `--help` for information or see the `appsettings.json` file.
-
