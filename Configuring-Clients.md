@@ -10,4 +10,4 @@ Look for the following options in your program/platform
 | Username/Password | `<Empty>`. Authentication is not required, but will be accepted if your client insists on their configuration
 
 
-This is valid for the default configuration for smtp4dev. [See configuration information](Configuration) for information on how to check and change this including enable SSL/TLS.
+This is valid for the default configuration for smtp4dev. [See configuration information](Configuration) for information on how to check and change this including how to enable SSL/TLS.
