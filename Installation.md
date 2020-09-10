@@ -24,6 +24,9 @@ This is a cross platform tag which will work on either Windows or Linux. To see 
 
 The folder ``/smtp4dev`` will be used for the database and auto-generated TLS certificate. You can mount a directory outside of the container here for peristent storage.
 
+[An example `docker-compose.yml` can be found here.](https://github.com/rnwood/smtp4dev/blob/master/docker-compose.yml)
+
+
 ## Downloading from github releases 
 
 If you don't want to use the dotnet global tool or Docker, you can download a standalone (or .NET Core runtime dependent) release from github.
