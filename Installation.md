@@ -37,10 +37,8 @@ If you don't want to use the dotnet global tool or Docker, you can download a st
 | Rnwood.Smtp4dev-linux-x64 | Linux x64 (Intel 64 bit) binary standalone |
 | Rnwood.Smtp4dev-linux-musl-x64 | Linux x64 (Intel 64 bit) binary standalone for MUSL based distros (Alpine Linux) |
 |Rnwood.Smtp4dev-linux-arm | Linux ARM (Intel 32 bit) binary standalone |
-| Rnwood.Smtp4dev-linux-arm64 | Linux ARM (Intel 64 bit) binary standalone |
 | Rnwood.Smtp4dev-osx-x64 | Currently unavailable due to changes in OSX that force signing. |
 | Rnwood.Smtp4dev-win-arm | Windows ARM 32-bit binary standalone |
-| Rnwood.Smtp4dev-win-arm64 | Windows ARM 64-bit binary standalone |
 
 - On Linux `chmod +x` the `Rnwood.Smtp4dev` file to make it executable
 
@@ -48,7 +46,7 @@ If you don't want to use the dotnet global tool or Docker, you can download a st
 
 - Run `Rnwood.Smtp4dev` (`.exe` on Windows). (If you downloaded the ``noruntime`` version, you need the .NET Core 3.1 runtime on your machine and you should execute ``dotnet Rnwood.Smtpdev.dll`` to run it.)
 
-- Open your browser at `http://localhost:5000` (to run the web server on a different port or make it listen on interfaces other than loopback, add the command line arg `--server.urls "http://0.0.0.0:5001/"` when starting the executable.
+- Open your browser at `http://localhost:5000`. To run the web server on a different port or make it listen on interfaces other than loopback, add the command line arg `--urls "http://0.0.0.0:5001/"` when starting the executable.
 
 ## How to run smtp4dev as a Windows service
 
