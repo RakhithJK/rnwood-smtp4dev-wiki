@@ -12,7 +12,7 @@ You can find the configuration file at `<installlocation>\appsettings.json`. Thi
   //Values specified here can be overriden in the following places (in order of processing - last wins)
   // - ~/appsettings.{Environment}.json - Where {Environment} is from ASPNETCORE_ENVIRONMENT env var
   // - {AppData}/smtp4dev/appsettings.json - Where {AppData} is APPDATA env var on Windows or XDG_CONFIG_HOME on non-Windows
-  // - Environmment variables in format "ServerOptions:HostName"
+  // - Environmment variables in format "ServerOptions:HostName" (Windows) or "ServerOptions__HostName" (Other platforms)
   // - Command line arguments - Specify --help for documentation.
 
   "ServerOptions": {
@@ -85,7 +85,7 @@ You can find the configuration file at `<installlocation>\appsettings.json`. Thi
 
 All the values from `appsettings.json` can be overriden by environment variables.
 
-Set environment varibable in format `ServerOptions:HostName`
+Set environmment variables in format "ServerOptions:HostName" (Windows) or "ServerOptions__HostName" (Other platforms)
 
 ## Command Line Options
 
