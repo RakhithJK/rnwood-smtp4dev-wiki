@@ -6,7 +6,7 @@ dotnet tool install -g Rnwood.Smtp4dev
 ```
 The above will install the most recent non pre-release version.
 
-If you want to use the pre-release development versions, add `--version "3.1.1-*"
+If you want to use the pre-release development versions, add the version (see Github releases) e.g. `--version "3.1.1-*"`
 
 Then you can start smtp4dev by running
 ```
