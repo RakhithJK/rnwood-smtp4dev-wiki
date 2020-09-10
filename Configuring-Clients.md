@@ -7,6 +7,7 @@ Look for the following options in your program/platform
 |SMTP hostname |`localhost` if client is on same machine as smtp4dev<br/>or the DNS name of the machine where smtp4dev is running e.g. `mymachine.mydomain`.|
 | SMTP port number | `25` | 
 | SSL/TLS, Secure connection, Encryption | `Off` or `Not required` etc |
+| Authentication | `Off`. See below.
 | Username/Password | `<Empty>`. Authentication is not required, but will be accepted if your client insists on their configuration
 
 
