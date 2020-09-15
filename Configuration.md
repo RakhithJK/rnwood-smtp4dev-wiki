@@ -6,6 +6,9 @@ For the latest information run smtp4dev with `--help` for information or see the
 ## Configuration Files
 
 You can find the configuration file at `<installlocation>\appsettings.json`. This file is included in every release and so may be overwritten when you update. To avoid this, create a configuration file at `{AppData}/smtp4dev/appsettings.json` (see below) and make your customisations there.
+
+Version 3.1.2 onwards will automatically reload and apply any edits to the configuration file without restarting. For previous versions you will need to restart the app.
+
 ```
 //SMTP4DEV settings
   //
