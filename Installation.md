@@ -18,8 +18,10 @@ smtp4dev
 Docker images for both Windows and Linux are available. To run with the web interface on port 3000 and SMTP on port 2525:
 
 ```
-docker run -p 3000:80 -p 2525:25 rnwood/smtp4dev:v3
+docker run --rm -it -p 3000:80 -p 2525:25 rnwood/smtp4dev:v3
 ```
+Remove `--rm -it` if you want to leave smtp4dev running in the background, otherwise it will run until you hit CTRL+C.
+
 This is a cross platform tag which will work on either Windows or Linux. To see the full list of available tags [see the Docker hub page for smtp4dev](https://hub.docker.com/r/rnwood/smtp4dev/tags/).
 
 The folder ``/smtp4dev`` will be used for the database and auto-generated TLS certificate. You can mount a directory outside of the container here for peristent storage.
