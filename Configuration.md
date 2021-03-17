@@ -36,7 +36,7 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
     //Default value: true
     "AllowRemoteConnections": true,
 
-    //Specifies the path where the database will be stored relative to APPDATA env var on Windows or XDG_CONFIG_HOME on non-Windows. Specify "" to use an in memory database.
+    //Specifies the path where the database will be stored relative to APPDATA env var on Windows or XDG_CONFIG_HOME on non-Windows. Leave value empty to use an in memory database.
     //Default value: "database.db"
     "Database": "database.db",
 
@@ -48,11 +48,15 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
     //Default value: 100
     "NumberOfSessionsToKeep": 100,
 
-    //Specifies the TLS mode to use. None=Off. StartTls=On demand if client supports STARTTLS. ImplicitTls=TLS as soon as connection is established.
+    //Specifies the TLS mode to Use
+    // Value        Description
+    // None         Off
+    // StartTls     On demand if client supports STARTTLS. 
+    // ImplicitTls  TLS as soon as connection is established.
     //Default value: "None"
     "TlsMode": "None",
 
-    //Specifies the TLS certificate to use if TLS is enabled/requested. Specify "" to use an auto-generated self-signed certificate (then see console output on first startup)
+    //Specifies the TLS certificate to use if TLS is enabled/requested. Leave value empty to use an auto-generated self-signed certificate (then see console output on first startup)
     //Default value: ""
     "TlsCertificate": ""
   },
@@ -108,16 +112,17 @@ Set environmment variables in format "ServerOptions:HostName" (Windows) or "Serv
                                to assign automatically
       --db=VALUE             Specifies the path where the database will be
                                stored relative to APPDATA env var on Windows or
-                               XDG_CONFIG_HOME on non-Windows. Specify "" to
+                               XDG_CONFIG_HOME on non-Windows. Leave value empty to
                                use an in memory database.
       --messagestokeep=VALUE Specifies the number of messages to keep
       --sessionstokeep=VALUE Specifies the number of sessions to keep
-      --tlsmode=VALUE        Specifies the TLS mode to use. None=Off. StartTls=
-                               On demand if client supports STARTTLS.
-                               ImplicitTls=TLS as soon as connection is
-                               established.
+      --tlsmode=VALUE        Specifies the TLS mode to use. 
+                              Value        Description
+                              None         Off
+                              StartTls     On demand if client supports STARTTLS. 
+                              ImplicitTls  TLS as soon as connection is established.
       --tlscertificate=VALUE Specifies the TLS certificate to use if TLS is
-                               enabled/requested. Specify "" to use an auto-
+                               enabled/requested. Leave value empty to use an auto-
                                generated self-signed certificate (then see
                                console output on first startup)
       --basepath=VALUE       Specifies the virtual path from web server root
@@ -125,7 +130,7 @@ Set environmment variables in format "ServerOptions:HostName" (Windows) or "Serv
                                 "/" or "/smtp4dev"
       --relaysmtpserver=VALUE
                              Sets the name of the SMTP server that will be used
-                               to relay messages or "" if messages should not
+                               to relay messages or leave value empty if messages should not
                                be relayed
       --relaysmtpport=VALUE  Sets the port number for the SMTP server used to
                                relay messages
@@ -139,7 +144,7 @@ Set environmment variables in format "ServerOptions:HostName" (Windows) or "Serv
                                headers is left unmodified). The sender of each
                                message is used if not specified.
       --relayusername=VALUE  The username for the SMTP server used to relay
-                               messages. If "" no authentication is attempted
+                               messages. If value empty no authentication is attempted
       --relaypassword=VALUE  The password for the SMTP server used to relay
                                messages
 ```
