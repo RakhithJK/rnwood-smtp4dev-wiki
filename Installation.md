@@ -79,7 +79,11 @@ Create a site in IIS and set the root path to where you unzipped smtp4dev (do no
 
 Grant permission to the IIS app pool to read and modify the files. The principal name is `IIS APPPOOL\<name>` where `<name>` is the name of the app pool, which is the name of the site you created unless you changed something.
 
-Edit the application pool and set '.NET CLR version' to 'No managed code'
+Edit the application pool advanced settings and ensure:
+- '.NET CLR version' is set to 'No managed code'
+- 'Start Mode' is set to 'AlwaysRunning'
+- 'Idle Time-out (minutes)' is set to '0'
+- Recycling > 'Regular Time Interval (minutes)' is set to '0'
 
 You can then access the site via the ports/hostname set in bindings that are set in IIS. If you see an error check the `Application` event log for details and you'll see any errors output from IIS.
 
