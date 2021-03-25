@@ -77,7 +77,7 @@ Download a smtp4dev release and unzip. You must pick the `win-x64` version.
 
 Create a site in IIS and set the root path to where you unzipped smtp4dev (do not point at `wwwroot` or `ClientApp`). You can also host in a virtual directory under another site, but don't forget to convert the directory to an application.
 
-Grant permission to the IIS app pool to read and modify the files. The principal name is `IIS APPPOOL\<name>` where `<name>` is the name of the app pool, which is the name of the site you created unless you changed something.
+Grant permission to the IIS app pool to read the files. The principal name is `IIS APPPOOL\<name>` where `<name>` is the name of the app pool, which is the name of the site you created unless you changed something.
 
 Edit the application pool advanced settings and ensure:
 - '.NET CLR version' is set to 'No managed code'
