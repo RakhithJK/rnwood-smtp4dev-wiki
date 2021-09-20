@@ -1,4 +1,4 @@
-smtp4dev configuration can be performed via the `appsetting.json` file, environment variables and command line arguments. 
+smtp4dev configuration can be performed via the `appsettings.json` file, environment variables and command-line arguments. 
 
 Some recently added options may not be reflected here.
 For the latest information run smtp4dev with `--help` for information or see the `appsettings.json` file.
@@ -7,7 +7,7 @@ For the latest information run smtp4dev with `--help` for information or see the
 
 You can find the configuration file at `<installlocation>\appsettings.json`. This file is included in every release and so may be overwritten when you update. To avoid this, create a configuration file at `{AppData}/smtp4dev/appsettings.json` (see below) and make your customisations there.
 
-Version 3.1.2 onwards will automatically reload and apply any edits to the configuration file without restarting. For previous versions you will need to restart the app to get the new changes to apply.
+Version 3.1.2 onwards will automatically reload and apply any edits to the configuration file without restarting. For previous versions, you will need to restart the app to get the new changes to apply.
 
 ```jsonc
 {
@@ -28,10 +28,10 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
 
   //SMTP4DEV settings
   //
-  //Values specified here can be overriden in the following places (in order of processing - last wins)
+  //Values specified here can be overridden in the following places (in order of processing - last wins)
   // - ~/appsettings.{Environment}.json - Where {Environment} is from ASPNETCORE_ENVIRONMENT env var
   // - {AppData}/smtp4dev/appsettings.json - Where {AppData} is APPDATA env var on Windows or XDG_CONFIG_HOME on non-Windows
-  // - Environmment variables in format "ServerOptions:HostName" (Windows) or "ServerOptions__HostName" (Other platforms)
+  // - Environment variables in format "ServerOptions:HostName" (Windows) or "ServerOptions__HostName" (Other platforms)
   // - Command line arguments - Specify --help for documentation.
 
   "ServerOptions": {
@@ -52,7 +52,7 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
     //Default value: true
     "AllowRemoteConnections": true,
 
-    //Specifies the path where the database will be stored relative to APPDATA env var on Windows or XDG_CONFIG_HOME on non-Windows. Leave value empty to use an in memory database.
+    //Specifies the path where the database will be stored relative to APPDATA env var on Windows or XDG_CONFIG_HOME on non-Windows. Leave the value empty to use an in-memory database.
     //Default value: "database.db"
     "Database": "database.db",
 
@@ -67,12 +67,12 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
     //Specifies the TLS mode to Use
     // Value        Description
     // None         Off
-    // StartTls     On demand if client supports STARTTLS. 
-    // ImplicitTls  TLS as soon as connection is established.
+    // StartTls     On-demand if the client supports STARTTLS. 
+    // ImplicitTls  TLS as soon as the connection is established.
     //Default value: "None"
     "TlsMode": "None",
 
-    //Specifies the TLS certificate to use if TLS is enabled/requested. Leave value empty to use an auto-generated self-signed certificate (then see console output on first startup)
+    //Specifies the TLS certificate to use if TLS is enabled/requested. Leave the value empty to use an auto-generated self-signed certificate (then see console output on the first startup)
     //Default value: ""
     "TlsCertificate": ""
   },
@@ -91,7 +91,7 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
     //Default value: []
     "AllowedEmails": [],
 
-    //Specifies the address used in MAIL FROM when relaying messages. (Sender address in message headers is left unmodified). The sender of each message is used if not specified.
+    //Specifies the address used in MAIL FROM when relaying messages. (Sender address in the message headers are left unmodified). The sender of each message is used if not specified.
     //Default value: ""
     "SenderAddress": "",
 
@@ -107,9 +107,9 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
 
 ## Environment Variables
 
-All the values from `appsettings.json` can be overriden by environment variables.
+All the values from `appsettings.json` can be overridden by environment variables.
 
-Set environmment variables in format 
+Set environmment variables in the format:
 * `"ServerOptions:HostName"` (Windows) 
 * or `"ServerOptions__HostName"` (Other platforms)
 
@@ -154,7 +154,7 @@ Set environmment variables in format
       --relaysmtpport=VALUE  Sets the port number for the SMTP server used to
                                relay messages
       --relayallowedemails=VALUE
-                             A comma separated list of recipient addresses for
+                             A comma-separated list of recipient addresses for
                                which messages will be relayed. An empty list
                                means that no messages are relayed
       --relaysenderaddress=VALUE
