@@ -7,10 +7,26 @@ For the latest information run smtp4dev with `--help` for information or see the
 
 You can find the configuration file at `<installlocation>\appsettings.json`. This file is included in every release and so may be overwritten when you update. To avoid this, create a configuration file at `{AppData}/smtp4dev/appsettings.json` (see below) and make your customisations there.
 
-Version 3.1.2 onwards will automatically reload and apply any edits to the configuration file without restarting. For previous versions you will need to restart the app.
+Version 3.1.2 onwards will automatically reload and apply any edits to the configuration file without restarting. For previous versions you will need to restart the app to get the new changes to apply.
 
-```
-//SMTP4DEV settings
+```jsonc
+{
+    "Environment": "Production",
+    "Logging": {
+        "IncludeScopes": false,
+        "Debug": {
+            "LogLevel": {
+                "Default": "Warning"
+            }
+        },
+        "Console": {
+            "LogLevel": {
+                "Default": "Warning"
+            }
+        }
+    },
+
+  //SMTP4DEV settings
   //
   //Values specified here can be overriden in the following places (in order of processing - last wins)
   // - ~/appsettings.{Environment}.json - Where {Environment} is from ASPNETCORE_ENVIRONMENT env var
@@ -86,18 +102,21 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
     //The password for the SMTP server used to relay messages
     "Password": ""
   }
+}
 ```
 
 ## Environment Variables
 
 All the values from `appsettings.json` can be overriden by environment variables.
 
-Set environmment variables in format "ServerOptions:HostName" (Windows) or "ServerOptions__HostName" (Other platforms)
+Set environmment variables in format 
+* `"ServerOptions:HostName"` (Windows) 
+* or `"ServerOptions__HostName"` (Other platforms)
 
 ## Command Line Options
 
-```
-  -h, --help, -?             Shows this message and exits
+```text
+      -h, --help, -?             Shows this message and exits
       --urls=VALUE           The URLs the web interface should listen on. For
                                example, http://localhost:123. Use `*` in place
                                of hostname to listen for requests on any IP
@@ -140,11 +159,16 @@ Set environmment variables in format "ServerOptions:HostName" (Windows) or "Serv
                                means that no messages are relayed
       --relaysenderaddress=VALUE
                              Specifies the address used in MAIL FROM when
-                               relaying messages. (Sender address in message
-                               headers is left unmodified). The sender of each
-                               message is used if not specified.
+                             relaying messages. (Sender address in message
+                             headers is left unmodified). The sender of each
+                             message is used if not specified.
       --relayusername=VALUE  The username for the SMTP server used to relay
-                               messages. If value empty no authentication is attempted
+                             messages. If value empty no authentication is attempted
       --relaypassword=VALUE  The password for the SMTP server used to relay
-                               messages
+                             messages
+      --imapport=VALUE       Specifies the port the IMAP server will listen on -
+                             allows standard email clients to view/retrieve
+                             messages
+      --nousersettings       Skip loading of appsetttings.json file in %APPDATA%
+      --recreatedb           Recreates the DB on startup if it already exists
 ```
