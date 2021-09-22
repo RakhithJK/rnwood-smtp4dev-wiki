@@ -25,6 +25,16 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
             }
         }
     },
+    "Kestrel": {
+        "Endpoints": {
+            "Http": {
+                "Url": "http://localhost:5000"
+            },
+            "Https": {
+                "Url": "https://localhost:5001"
+            }
+        }
+    },
 
   //SMTP4DEV settings
   //
