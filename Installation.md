@@ -51,8 +51,6 @@ If you don't want to use the dotnet global tool or Docker, you can download a st
 
 - Run `Rnwood.Smtp4dev` (`.exe` on Windows). (If you downloaded the ``noruntime`` version, you need the .NET Core 3.1 runtime on your machine and you should execute ``dotnet Rnwood.Smtpdev.dll`` to run it.)
 
-- Open your browser at `http://localhost:5000`. To run the web server on a different port or make it listen on interfaces other than loopback, add the command line arg `--urls "http://0.0.0.0:5001/"` when starting the executable.
-
 ## How to run smtp4dev as a Windows service
 
 Download one the Windows standalone versions which is applicable for your OS/architecture.
@@ -87,3 +85,9 @@ Edit the application pool advanced settings and ensure:
 
 You can then access the site via the ports/hostname set in bindings that are set in IIS. If you see an error check the `Application` event log for details and you'll see any errors output from IIS.
 
+## Accessing the Web User Interface
+Once the service is running, access to the app's interface via a browser.
+
+- The default port is 5000, open your browser at `http://localhost:5000`. 
+
+To run the webserver on a different port or make it listen on interfaces other than loopback, add the command line arg `--urls "http://0.0.0.0:5001/"` when starting the executable.
