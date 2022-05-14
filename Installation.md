@@ -1,12 +1,12 @@
 ## How to run smtp4dev as a dotnet global tool
 
-If you're using the .NET Core SDK 3.1 or greater, you can install smtp4dev as a global tool using the following command:
+If you're using the .NET Core SDK 3.1 (.NET 6.0 if using smtp4dev version >= 3.2.x) or greater, you can install smtp4dev as a global tool using the following command:
 ```
 dotnet tool install -g Rnwood.Smtp4dev
 ```
 The above will install the most recent non pre-release version.
 
-If you want to use the pre-release development versions, add the version (see Github releases) e.g. `--version "3.1.1-*"`
+If you want to use the pre-release development versions, add `--prerelease`
 
 Then you can start smtp4dev by running
 ```
@@ -49,7 +49,7 @@ If you don't want to use the dotnet global tool or Docker, you can download a st
 
 - Edit ``appsettings.json`` and set the port number you want the SMTP server to listen on.
 
-- Run `Rnwood.Smtp4dev` (`.exe` on Windows). (If you downloaded the ``noruntime`` version, you need the .NET Core 3.1 runtime on your machine and you should execute ``dotnet Rnwood.Smtpdev.dll`` to run it.)
+- Run `Rnwood.Smtp4dev` (`.exe` on Windows). (If you downloaded the ``noruntime`` version, you need the .NET Core 3.1 (.NET 6.0 if using smtp4dev version >= 3.2.x) runtime on your machine and you should execute ``dotnet Rnwood.Smtpdev.dll`` to run it.)
 
 ### Accessing the Web User Interface
 Once the service is running, access to the app's interface via a browser.
