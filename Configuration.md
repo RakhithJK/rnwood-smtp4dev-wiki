@@ -46,6 +46,11 @@ Version 3.1.2 onwards will automatically reload and apply any edits to the confi
 
   "ServerOptions": {
 
+    // Locks settings from being changed by user via web interface
+    // Requires version > 3.2.0-ci20220526
+    // Default value: false
+    "LockSettings": false,
+
     //Specifies the virtual path from web server root where SMTP4DEV web interface will be hosted. e.g. "/" or "/smtp4dev"
     //Default value: "/"
     "BasePath": "/",
@@ -132,6 +137,8 @@ Set environmment variables in the format:
                                of hostname to listen for requests on any IP
                                address or hostname using the specified port and
                                protocol (for example, http://*:5000)
+      --locksettings           Locks settings from being changed by user via web interface
+                               Requires version > 3.2.0-ci20220526
       --hostname=VALUE       Specifies the server hostname. Used in auto-
                                generated TLS certificate if enabled.
       --allowremoteconnections
