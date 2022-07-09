@@ -76,7 +76,7 @@ sc.exe create Smtp4dev binPath= "{PathToExe} --service"
 
 ## How to run smtp4dev in Windows IIS
 
-Make sure you have installed the [ASP.NET Core Runtime - Windows Hosting Bundle](https://tracker.iplocation.net/iinm/) so that IIS can host ASP.NET Core apps.
+Make sure you have installed the [ASP.NET Core Runtime - Windows Hosting Bundle](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer) so that IIS can host ASP.NET Core apps.
 
 Download a smtp4dev release and unzip. You must pick the `win-x64` version.
 
